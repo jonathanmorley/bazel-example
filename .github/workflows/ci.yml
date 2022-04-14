@@ -16,9 +16,9 @@ jobs:
     strategy:
       matrix:
         runner:
-          - windows-latest  # windows
+          #- windows-latest  # windows
           - macos-latest    # macos
-          - ubuntu-latest   # linux
+          #- ubuntu-latest   # linux
     runs-on: ${{ matrix.runner }}
     steps:
       - name: Checkout

@@ -7,7 +7,6 @@ http_archive(
     name = "rules_rust",
     sha256 = "b58c63a6d8221f408f8852b4f74f81bc8c7aac9273f3899a74e32e6168a2c624",
     urls = [
-        "https://mirror.bazel.build/github.com/bazelbuild/rules_rust/releases/download/0.2.1/rules_rust-v0.2.1.tar.gz",
         "https://github.com/bazelbuild/rules_rust/releases/download/0.2.1/rules_rust-v0.2.1.tar.gz",
     ],
 )
@@ -46,7 +45,10 @@ load("@rules_rust//crate_universe:defs.bzl", "crates_repository")
 crates_repository(
     name = "crate_index",
     lockfile = "//:Cargo.Bazel.lock",
-    manifests = ["//rust-bin:Cargo.toml"],
+    manifests = [
+        "//:Cargo.toml",
+        "//rust-bin:Cargo.toml",
+    ],
 )
 
 load("@crate_index//:defs.bzl", "crate_repositories")
