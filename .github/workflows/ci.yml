@@ -1,0 +1,28 @@
+name: Continuous Integration
+
+env:
+  RUST_LOG: info
+  RUST_BACKTRACE: 1
+  BAZEL_STARTUP_FLAGS: --bazelrc=${{ github.workspace }}/.github/github.bazelrc
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    name: Test
+    strategy:
+      matrix:
+        runner:
+          - windows-latest  # windows
+          - macos-latest    # macos
+          - ubuntu-latest   # linux
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: bazel build ...
+      - name: Test
+        run: bazel test ...

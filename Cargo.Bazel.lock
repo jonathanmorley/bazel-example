@@ -1,0 +1,50 @@
+{
+  "checksum": "fa17f7d3baa389c1a4a3abff32c32d7e146560050c570c31f76b0e9f43410c6a",
+  "crates": {
+    "rust_bin 0.1.0": {
+      "name": "rust_bin",
+      "version": "0.1.0",
+      "repository": null,
+      "targets": [
+        {
+          "Library": {
+            "crate_name": "rust_bin",
+            "crate_root": "src/lib.rs",
+            "srcs": {
+              "include": [
+                "**/*.rs"
+              ],
+              "exclude": []
+            }
+          }
+        },
+        {
+          "Binary": {
+            "crate_name": "rust_bin",
+            "crate_root": "src/main.rs",
+            "srcs": {
+              "include": [
+                "**/*.rs"
+              ],
+              "exclude": []
+            }
+          }
+        }
+      ],
+      "library_target_name": "rust_bin",
+      "common_attrs": {
+        "compile_data_glob": [
+          "**"
+        ],
+        "edition": "2021",
+        "version": "0.1.0"
+      },
+      "license": null
+    }
+  },
+  "binary_crates": [],
+  "workspace_members": {
+    "rust_bin 0.1.0": "rust-bin"
+  },
+  "conditions": {}
+}
