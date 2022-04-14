@@ -6,6 +6,8 @@
 
 The addition of the HOME env var is necessary if you are using asdf
 
+The CI GitHub action is callable
+
 ## Projects
 
 ### Rust Binary (`rust-bin`)
