@@ -14,7 +14,7 @@ http_archive(
 git_repository(
     name = "vaticle_bazel_distribution",
     remote = "https://github.com/vaticle/bazel-distribution",
-    commit = "8eb8a0e920d43bf2d3100e22e7e36dc29009bac5",
+    commit = "c496caa8603aed28411b806e37ce3ebfe7e2812a",
     shallow_since = "1648753856 +0100"
 )
 
